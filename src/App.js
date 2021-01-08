@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Dish/>
+      <Dish name= {dish} qty="3"/>
       Yo como { dish }
       <ul>
         {
