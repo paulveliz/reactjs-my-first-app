@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 class Dish extends Component {
     render(){
@@ -23,7 +23,12 @@ export class Flag extends Component {
 
 class Ingredient extends Component {
     render(){
-        return React.createElement('h4', { }, 'Ingrediente');
+        return (
+            <Fragment>
+                <h4>Ingredient</h4>
+                <h4>Ingredient</h4>
+            </Fragment>
+        );
     }
 }
 
