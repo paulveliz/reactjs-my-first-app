@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import Button from '@material-ui/core/Button';
 
 
 export class Flag extends Component {
@@ -25,9 +26,12 @@ class Ingredient extends Component {
 class Dish extends Component {
     render(){
         return (
-            <div className= "dish" >
+            <div className = "dish" >
                 <h1>Platillo</h1>
                 <Ingredient/>
+                <Button variant="contained" color="primary">
+                    Primary
+                </Button>
             </div>
         );
     }
