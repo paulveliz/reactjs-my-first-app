@@ -5,18 +5,11 @@ import './styles/App.css';
 
 function App() {
   const dish = "tacos";
-  const dishes = ['tacos', 'deviche', 'pie'];
 
   return (
     <div className="App">
       <Header/>
-      <Dish name= {dish} qty="3"/>
-      Yo como { dish }
-      <ul>
-        {
-          dishes.map( dishMapped => <li> { dishMapped } </li>  )
-        }
-      </ul>
+      <Dish name= {dish} ingredients = {['Tortilla', 'Cebolla', 'Carne']} qty="3"/>
     </div>
   );
 

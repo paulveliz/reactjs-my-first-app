@@ -16,22 +16,28 @@ class Ingredient extends Component {
     render(){
         return (
             <Fragment>
-                <h4>Ingredient</h4>
-                <h4>Ingredient</h4>
+                <h4>{ this.props.name }</h4>
             </Fragment>
         );
     }
 }
 
 class Dish extends Component {
+
+    countIngredients(){
+        return this.props.ingredients.length;
+    }
+
     render(){
         return (
             <div className = "dish" >
                 <h1>{ this.props.name }</h1>
-                {this.props.qty}
-                <Ingredient/>
+                { this.countIngredients() }
+                {
+                    this.props.ingredients.map( ingrediente =>  <Ingredient name = {ingrediente}/>  )
+                }
                 <Button variant="contained" color="primary">
-                    Primary
+                    Elegir
                 </Button>
             </div>
         );
