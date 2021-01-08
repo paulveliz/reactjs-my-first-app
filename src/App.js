@@ -1,6 +1,7 @@
-import './styles/App.css';
 import  Header from './components/header';
 import  Dish, * as D  from "./components/dish";
+
+import './styles/App.css';
 
 function App() {
   return (
