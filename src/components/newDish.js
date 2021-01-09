@@ -5,26 +5,26 @@ import Add from "@material-ui/icons/Add";
 
 class NewDish extends Component {
 
-    platillo = React.createRef();
+    newDish = React.createRef();
 
-    addDish = () => {
-        console.log('Nuevo platillo');
-        console.log(this.platillo);
+    addDish = (e) => {
+        e.preventDefault();
+        console.log(this.newDish.value);
     }
 
     render(){
         return (
             <div>
                 <h4>Nuevo platillo</h4>
-                <form>
+                <form onSubmit = { this.addDish }>
+                    {/* <input ref= { this.newDish } /> */}
                     <TextField
                         type = "input"
                         label = "Nombre del platillo..."
                         variant = "outlined"
-                        onSubmit = {this.addDish}
-                        ref = { (e) => e = this.platillo }
+                        inputRef = { e => (this.newDish = e) }
                     />
-                    <IconButton color = "primary" onClick = {this.addDish} >
+                    <IconButton color = "primary" onClick = { this.addDish } >
                         <Add/> 
                     </IconButton>
                 </form>
