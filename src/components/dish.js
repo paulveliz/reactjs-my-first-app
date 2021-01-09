@@ -34,7 +34,7 @@ class Dish extends Component {
                 <h1>{ this.props.name }</h1>
                 { this.countIngredients() }
                 {
-                    this.props.ingredients.map( ingrediente =>  <Ingredient name = {ingrediente}/>  )
+                    this.props.ingredients.map( (ingrediente, index, arr) =>  <Ingredient key = {index} name = {ingrediente}/>  )
                 }
                 <Button variant="contained" color="primary">
                     Elegir
